@@ -9,6 +9,8 @@ Imports:
     readr,
     readxl,
     rmarkdown,
+    snakecase,
+    stringr,
     tidyr
 Encoding: UTF-8
 Title: AdvancedR3
