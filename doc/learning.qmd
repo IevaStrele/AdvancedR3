@@ -30,3 +30,7 @@ lipidomics %>%
     ~ round(.x, digits = 1)
   ))
 ```
+
+```{r}
+descriptive_stats(lipidomics)
+```
