@@ -22,7 +22,5 @@ descriptive_stats(lipidomics)
 ## Figure outputs
 
 ```{r}
-ggplot(lipidomics, aes(x = value)) +
-  geom_histogram() +
-  facet_wrap(vars(metabolite), scales = "free")
+plot_distributions(lipidomics)
 ```
