@@ -8,7 +8,7 @@ format: html
 targets::tar_config_set(store = here::here("_targets")) # lai meklē visu target folderī
 library(tidyverse)
 library(targets)
-library(tidymo)
+library(tidymodels)
 source(here::here("R/functions.R"))
 lipidomics <- tar_read(lipidomics)
 ```
@@ -27,4 +27,19 @@ tar_read(df_stats_by_metabolite) %>%
 
 ```{r}
 tar_read(fig_metabolite_distribution)
+```
+
+## Building the model
+
+```{r}
+log_reg_specs <- logistic_reg() %>%
+  set_engine("glm")
+
+log_reg_specs
+```
+
+```{r}
+lipidomics %>%
+  column_values_to_snake_case(metabolite) %>%
+  metabolites_to_wider()
 ```
