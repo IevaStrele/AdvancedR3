@@ -1,14 +1,18 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-.Random.seed|object|3e9b3a74d9e47f34|||||||||||||||
+.Random.seed|object|79a3fb2cbbb5b582|||||||||||||||
+calculate_estimates|function|5a0d9aed4d84aa5a|||||||||||||||
 column_values_to_snake_case|function|1cbcfee90352cf60|||||||||||||||
 create_model_workflow|function|b1c4ccb7cbf5f62a|||||||||||||||
 create_recipe_spec|function|e2c69062d3a5c353|||||||||||||||
 descriptive_stats|function|472d21813931a9b3|||||||||||||||
+df_model_estimates|stem|e58366f3582d474c|2954b8877e0c4723|848bc27d0bd80303|791794764||t20069.4185887015s|c82e672d71948923|1038|rds|local|vector|||3.44|glm.fit algorithm did not converge. glm.fit fitted probabilities numerically 0 or 1 occurred. glm.fit fitted probabilities numerically 0 or 1 occurred|
 df_stats_by_metabolite|stem|0467e7aee3640583|ce15a181d02b2e03|6fb893c0a08c7c6b|519715527||t20068.3798789076s|f247d143044ef25b|457|rds|local|vector|||0.11||
 fig_metabolite_distribution|stem|fff9746336f64ba8|86673d84fb1f96ff|f1ab9b715e2e2466|1599393873||t20068.3843003527s|791eb27d901ec7c6|142623|rds|local|vector|||0.45||
 file|stem|f6bf5a5688fb274f|09442fac263aded2|2c530c1562a7fbd1|1735323524|data/lipidomics.csv|t20059.7179148647s|2ec1867e6b7db575|24313|file|local|vector|||0.01||
+generate_model_results|function|36b3832cca0d023d|||||||||||||||
 lipidomics|stem|a49d512cbd22229e|0adf46d83f39a429|f0e124423009cc2f|-1498393010||t20068.3564213449s|5efea0df906539e6|4884|rds|local|vector|||0.22||
 metabolites_to_wider|function|190c8cc4b495bfea|||||||||||||||
 plot_distributions|function|69bc138d6b50a595|||||||||||||||
-quarto_doc|stem|b4a9dcf4d40409db|388f14abd14602e7|bd55801dc98d655b|1582462002|doc/learning.html*doc/learning.qmd|t20069.3417558497s|f016fa112fd5338b|35213|file|local|vector|||20.01||
+quarto_doc|stem|11d37b3e0edf3961|388f14abd14602e7|bd55801dc98d655b|1582462002|doc/learning.html*doc/learning.qmd|t20069.4187774766s|7e188358de680ac0|35697|file|local|vector|||16.32||
+split_by_metabolite|function|4e6de247c1cd600a|||||||||||||||
 tidy_model_output|function|411cd07bc2ec9eec|||||||||||||||
