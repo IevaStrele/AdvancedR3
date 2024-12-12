@@ -116,3 +116,33 @@ tidy_model_output <- function(workflow_fitted_model) {
     workflows::extract_fit_parsnip() %>%
     broom::tidy(exponentiate = TRUE)
 }
+
+
+#' Conver long form data to list of wide form data by metabolites
+#'
+#' @param data The lipidomics data set
+#'
+#' @return A list of data frames
+split_by_metabolite <- function(data) {
+  data %>%
+    column_values_to_snake_case(metabolite) %>%
+    dplyr::group_split(metabolite) %>%
+    purrr::map(metabolites_to_wider)
+}
+
+
+
+#' Generate the results of a model
+#'
+#' @param data The lipidomics dataset
+#'
+#' @return A data frame
+generate_model_results <- function(data) {
+  create_model_workflow(
+    parsnip::logistic_reg() %>%
+      parsnip::set_engine("glm"),
+    data %>% create_recipe_spec(tidyselect::starts_with("metabolite_"))
+  ) %>%
+    parsnip::fit(data) %>%
+    tidy_model_output()
+}
