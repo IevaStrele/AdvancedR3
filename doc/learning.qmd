@@ -48,3 +48,7 @@ lipidomics %>%
   list_rbind() %>%
   filter(str_detect(term, "metabolite_"))
 ```
+
+```{r}
+lipidomics %>% calculate_estimates()
+```
